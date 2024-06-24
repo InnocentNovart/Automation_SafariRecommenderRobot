@@ -1,0 +1,506 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="708.8,743.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/python" xmlns:p1="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="112">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Python</x:String>
+      <x:String>UiPath.Python.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Docs</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap:VirtualizedContainerService.HintSize="719.2,678.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSafari" />
+      <Variable x:TypeArguments="x:String" Name="Budget" />
+      <Variable x:TypeArguments="x:String" Name="Month" />
+      <Variable x:TypeArguments="x:String" Name="TravelMonth" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtMonths" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtPlanTrip" />
+      <Variable x:TypeArguments="x:String" Name="YourEmail" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <x:Double x:Key="Height">642</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">270,40.1 100,40.1 100,125.6</av:PointCollection>
+        <x:Double x:Key="Width">685.6</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID5</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">0,125.6</av:Point>
+          <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">100,194.4 100,244.4</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Website Data Scrapping" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable2" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="Tanzania_Safari2.csv" />
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="433.6,468.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="bf19f9ae-5f9e-4b65-8efb-aa1ac5b8c484" Version="V1">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,252" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable2]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Company'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Duration (days)'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column5' Name='Description'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column8' Name='Languages'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column6' Name='Rating'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column7' Name='Total Reviews'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column9' Name='Url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='dl' idx='1' /&gt;&lt;webctrl tag='dd' idx='5' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='dl' idx='3' /&gt;&lt;webctrl tag='dd' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='dl' idx='1' /&gt;&lt;webctrl tag='dd' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column5' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column8' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='dl' idx='1' /&gt;&lt;webctrl tag='dd' idx='4' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column6' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column7' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column9' attr='href'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="50" Version="V1">
+                  <uix:NExtractData.NextLink>
+                    <uix:TargetAnchorable BrowserURL="https://www.tourradar.com/i/tanzania-safari" DesignTimeRectangle="1266, 507, 50, 50" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' idx='6' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' tag='BUTTON' /&gt;" Guid="b35d0259-58da-46c6-aab6-e769458b6189" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVHSURBVGhD1ZlrbxNHFIb9E1ukQvnULyBURahFtFStqlYq/VUVqloBkWgRIQohISQpsePETuzE90tu03lO9ixrs3Z27ZmN/UoLm9nZmffZOXNmdp0zDnVxcREe5+fn4XE2dESvRe9xqanBhkFOz87Myemp6Z+cmJ49uv2+6fR6pt3tysE5ZVyjDnW5Zxh0Wk0MFgXCGCYFIjDfs+eYZoSiRjmnjGvUoS73cC9tKKS2P6lSg2mHCoQhRoL/+XtSxbU1DWAqsDggnrJr0WYcYBolBqPhM9tJ34ZQq9ORMPIt+qAv+qTvNHCJwBRKRynt05tG9KWjlwbuSjAaYqLz5Jjo1yX6xgNeksCNBVOoZtuGnoe5lFZ4wEsSuJFg3HgKFDE+A1AqvOAJb+PgYsEUqtXpZpIk0uoyqXTHwsWCkV6ZsNc5p64S3vCI1zh9AkZFiWU73LMuPOI1Dm4AjGHVZHE+Jn5nRXgclUwGwC5D8HKI50V4xfPwqIVgEJNx6q12UDI/wjPeo6MWgrGqt4R+fkZLhWe8w6AKwYjTWrMV/DV/wjsMKgEjPjs2Tl2H4aul1wNP0afwDoPONQHjxa/WajndYTQaDfPZF7fML789Nv0MFnm8wwALEjCG8Mgaca0/njwxn9/80jz66WfTzmBdhEHDMUcm6fb6XsDQn3/9LXDffve9adkn6lMwwAJTjphstts2Rv11qnD3Hzw0tVo9KHUvGGCBKcfqXWs2ZZHzKYW7t3DfVI+OglK3ggEWmHLEZNU+xf7Jx1TpS0+fPRe4u18vmFK5HJS6EwywwCRgh8e1T7YkvgTcjVu3zVd37pq9vf2g1I1ggEXASJPlqp/QGKVni4sycgvfPAhK3AkWmHK8tJWq1aA4G/kEgwUmGbH9SiVc2HwrGor5QiEodSMYYJERIx5LFUtp//At38kDBlgGkkfDvrD5VBbpHoYwefAJuVqvm4rHhTOrBRoGWGDKyQbYbvmLh5XgslvpfvHhDz9631LBAAtMsqXiU9aO4zUFAcUOn01wN4MvXjDAIlsq2QTb9FgoHzh9e2Y3D9Svj3/P5LUF7zDAIptg/iE9Hhwdmz3H4bj0ejmzF028wwCLgFFITPIGul3ck0rzKLzDoOvxx08Ddg7kS2WbWWpyYZ6EZ7zDoHteAWPoyP2ky81CUS7Mk/CMdxhgQQKGeIcho/xnM0vWm+JphFc8SzYMoFAIpkkE8vUP+cwm/TTCI17xrElDFYIhiDVtbhdnPyTxqMtUdLTQABjEbEdYvTfyBVM8OAyuzJ7whke84jk6WmgADJFV2CWzmVzZ3JL/Z01Rb4l+RlIxrKTOffsKsLyxKRvLWRFe8IQ3Se9DI6WKBUMsdGSaXTvkS+82ZFW/buEBL3jCmy7GcRoJpvONXw1p6NX6hkzU6xJ94wEv8uN6zLyKaiQYisKxF1vZ2rbpdUfKshJ90Sd94yEJFBoLhhSOlFq2b77vdvLm5dt1++T8jx590Bd90jcekkChK8EQDRHPvBLwfXxnv2SW329KvLt+I0C0Sdv0QV/yTd72jYckUCgRmIq0yn6MiXtwfGy2dovWwHvz7+qa3a/tyu56UnEvbdAWbdI2fdAXfcal9HFKBYZ09Pic3Gi3pXP2am/sHMDUP6urcv7BlrHOaPioNKy5Rh3qcg/3ck5btEnb9JFmlKJKDaaKAvJUCRfWFoyt2clOGL1cWzcv3rw1i8sr5nlwcE4Z16hDXe7hXtqgrWmAVBODqeicRZKRYBfALx6EVbXekAnPfCFFk645OKeMa9ShLvdwL23Q1jRAlzLmf7gZ1UkPz4SfAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Best Tanzania Safari Tours 2024 - TourRadar' /&gt;" SearchSteps="FuzzySelector, Image">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="1203, 507, 53, 55" ElementType="Button" FriendlyName="'5'" FullSelectorArgument="&lt;webctrl aaname='5' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='5' tag='BUTTON' type='' check:text='5' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAA7CAYAAADB0CKOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGtSURBVGhD7daxS4JBGMfx/iYHdRGXbGhxEAQhwaFwaogCQcS2CAxBQUQIGsJBHCQcxEHeJYeyoWyxpYYyCJzeQRCEX/e+XlSim89JT88XXpDjlo937927gX+QILkkSC4JkkuC5JIguSRILgmSS4LkkiC5JEguCXJlvdQR8/rgWfgU8KCnUWUEOenmFCaAxEkZpcr8Y+FNz6PKCPK5FlfILDq2HjCcAaSNTkZty/AFBnrEdAaQTzgPK2TGUtz1RI+0LaTVARM6q6NVTCGy5Rw2AYT2sri8G+lJtNEjH8vwu6doALFMFa2bHq6bZaR3Au7YfnOoJ9JFjhxZObV6CzDjPvJRB7+L2qseI8rAO7m82dXiQ7JBu5prReL9CklnKxf7eoAmM8jxRP+YS38J+St/GqnvSO8BGh966Ed2O+Vu19Pukj9hRZGv5BckorbkL8q4h7xzf4bVtyut0cB2nQ7ROJxdF99XSAFJ574MxlG6JxaqzLyTUxuDdgFH0U13VT3BbSSOq7hdsIUpMoNcc4LkkiC5JEguCZJLguSSILkkSC4JkkuC5JIgufQPkMAniFjfrgtzjA8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NExtractData.NextLink>
+                  <uix:NExtractData.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www.tourradar.com/i/tanzania-safari" DesignTimeRectangle="596, 471, 1075, 6813" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul' tag='UL' /&gt;" Guid="c42a8775-8839-4e02-83d7-5c4aeb4ca738" InformativeScreenshot="fbe214a100fa7745b64eaaac247fca2a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Best Tanzania Safari Tours 2024 - TourRadar' /&gt;" SearchSteps="Selector" />
+                  </uix:NExtractData.Target>
+                </uix:NExtractData>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACjSURBVDhPxZLdCYAwDIQLruAOLuGDWziKT07hq+AaruFEehd6EKVS/MODj9g2vTax4XU141KQOPxBOL0CLWMc242EJaWkRcQOrKD181klDGYwgDIygXNTTSL2gAaCJdGM353P3UmTTIrJ1gdQA96EsbTklLB4NNBGu4XPSUqLiN6Add82YC9U+yUD1s1NnryBFxL529hEcd68z4RT88/3uULYACTPqr2Mnt2PAAAAAElFTkSuQmCC" InformativeScreenshot="bc167bb44f8424974955858cdef65c53.png" Selector="&lt;html app='chrome.exe' title='10 Best Tanzania Safari Tours 2024 - TourRadar'/&gt;" Url="https://www.tourradar.com/i/tanzania-safari" />
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+        <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable2]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Data\Tanzania_Safari2.csv" sap:VirtualizedContainerService.HintSize="433.6,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" />
+      </Sequence>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">0,244.4</av:Point>
+              <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">100,313.2 100,354.4</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Famous Safari Destinations" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="408.8,189.6" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="C:\Users\inova\AppData\Local\Programs\Python\Python38\" TargetPlatform="x64" Version="Python 3.8" WorkingFolder="C:\Users\inova\OneDrive\Desktop\Innocent Novart_RPA Final\Data">
+              <p:PythonScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="p:PythonObject" Name="image" />
+                      <Variable x:TypeArguments="ui:Image" Name="FamousDestinations" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:RunScript Code="{x:Null}" DisplayName="Run Python Script" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="RunScript_1" ScriptFile="Data\Famous_Destinations.py" />
+                  </Sequence>
+                </ActivityAction>
+              </p:PythonScope.Body>
+            </p:PythonScope>
+          </Sequence>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">0,354.4</av:Point>
+                  <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">100,423.2 100,473.2</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Safari Offers" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="408.8,189.6" sap2010:WorkflowViewState.IdRef="PythonScope_2" Path="C:\Users\inova\AppData\Local\Programs\Python\Python38\" TargetPlatform="x64" Version="Python 3.8" WorkingFolder="C:\Users\inova\OneDrive\Desktop\Innocent Novart_RPA Final\Data">
+                  <p:PythonScope.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="p:PythonObject" Name="image" />
+                          <Variable x:TypeArguments="ui:Image" Name="FamousDestinations" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <p:RunScript Code="{x:Null}" DisplayName="Run Python Script" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="RunScript_2" ScriptFile="Data\safaridestinationvisualizations.py" />
+                      </Sequence>
+                    </ActivityAction>
+                  </p:PythonScope.Body>
+                </p:PythonScope>
+              </Sequence>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID0">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">0,473.2</av:Point>
+                      <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">200,507.6 230,507.6 230,150 350,150</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Safari Months Ranking" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="variable3" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Tanzania Safaris | Luxury Bespoke Holidays | Yellow Zebra Safaris" sap:VirtualizedContainerService.HintSize="433.6,468.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="2e2b0744-b296-4672-8246-fcd67167381e" Version="V1">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,252" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[variable3]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Month'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Details'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="2e2b0744-b296-4672-8246-fcd67167381e" Version="V1">
+                              <uix:NExtractData.Target>
+                                <uix:TargetAnchorable BrowserURL="https://yellowzebrasafaris.com/tanzania/" DesignTimeRectangle="-7010, 244, 1899, 684" FriendlyName="'{ &quot;contentUrl&quot;:'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="77959ea5-5143-4d6f-a5cf-b5cc6b837991" InformativeScreenshot="ccd729165f54eef7c3eee729aced1067.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tanzania Safaris | Luxury Bespoke Holidays | Yellow Zebra Safaris' /&gt;" SearchSteps="Selector" />
+                              </uix:NExtractData.Target>
+                            </uix:NExtractData>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="0e015e0645459bd8dc5095cf29b137db.png" Selector="&lt;html app='chrome.exe' title='Tanzania Safaris | Luxury Bespoke Holidays | Yellow Zebra Safaris'/&gt;" Url="https://yellowzebrasafaris.com/tanzania/" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                    <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[variable3]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Data\Best_Safari_Month.csv" sap:VirtualizedContainerService.HintSize="433.6,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_3" />
+                    <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="PythonScope_3" Path="C:\Users\inova\AppData\Local\Programs\Python\Python38\" TargetPlatform="x64" Version="Python 3.8" WorkingFolder="C:\Users\inova\OneDrive\Desktop\Innocent Novart_RPA Final\Data">
+                      <p:PythonScope.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="p:PythonObject" Name="image" />
+                              <Variable x:TypeArguments="ui:Image" Name="FamousDestinations" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <p:RunScript Code="{x:Null}" DisplayName="Run Python Script" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="RunScript_3" ScriptFile="Data\Safari_Months_Ranking.py" />
+                          </Sequence>
+                        </ActivityAction>
+                      </p:PythonScope.Body>
+                    </p:PythonScope>
+                  </Sequence>
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">350,115.6</av:Point>
+                          <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">450,184.4 450,234.4</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Safari Recommendation" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:CopyFile ContinueOnError="{x:Null}" Destination="C:\Users\inova\OneDrive\Desktop\Innocent Novart_RPA Final\Data\Safari_Report.docx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="660.8,160" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Data\Your Safari Report.docx">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CopyFile>
+                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="660.8,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="C:\Users\inova\OneDrive\Desktop\Innocent Novart_RPA Final\Data\Tanzania_Safari.xlsx">
+                          <ui:ExcelApplicationScope.Body>
+                            <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelReadRange AddHeaders="True" DataTable="[dtSafari]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1:I51" SheetName="Sheet1" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ExcelApplicationScope.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ExcelApplicationScope>
+                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="660.8,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Data\Best_Safari_Month_Clean.xlsx">
+                          <ui:ExcelApplicationScope.Body>
+                            <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelReadRange AddHeaders="True" DataTable="[dtMonths]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" Range="B1:D13" SheetName="Sheet1" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ExcelApplicationScope.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ExcelApplicationScope>
+                        <p1:WordApplicationScope DisplayName="Word Application Scope" FilePath="C:\Users\inova\OneDrive\Desktop\Innocent Novart_RPA Final\Data\Safari_Report.docx" sap:VirtualizedContainerService.HintSize="660.8,1414.4" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+                          <p1:WordApplicationScope.Body>
+                            <ActivityAction x:TypeArguments="ui:WordDocument">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="627.2,1304.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="585.6,52.8" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="What is your budget? (in USD)" OptionsString="1000;1250;1500;1750;2000;2250;2500;3000;7000" Title="Safari Budget">
+                                  <ui:InputDialog.Result>
+                                    <OutArgument x:TypeArguments="x:String">[Budget]</OutArgument>
+                                  </ui:InputDialog.Result>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:InputDialog>
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtSafari]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="585.6,736.8" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                                  <ui:ForEachRow.Body>
+                                    <ActivityAction x:TypeArguments="sd:DataRow">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,616" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If Condition="[Double.Parse(row.Item(&quot;Price&quot;).ToString)&lt;=Double.Parse(Budget)]" sap:VirtualizedContainerService.HintSize="510.4,523.2" sap2010:WorkflowViewState.IdRef="If_4">
+                                          <If.Then>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="475.2,334.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Company Name: &quot;+row.item(&quot;Company&quot;).ToString+vbNewLine+&quot;Price for 2 people: &quot;+row.item(&quot;Price&quot;).ToString+&quot; USD&quot;+vbNewLine+&quot;Offer: &quot;+row.item(&quot;Description&quot;).ToString+vbNewLine+&quot;Link to website: &quot;+row.Item(&quot;Url&quot;).ToString]" />
+                                              <p1:WordSetBookmarkContent BookmarkName="recommendations" BookmarkText="[vbnewline+&quot;Company Name: &quot;+row.item(&quot;Company&quot;).ToString+vbNewLine+&quot;Price for 2 people: &quot;+row.item(&quot;Price&quot;).ToString+&quot; USD&quot;+vbNewLine+&quot;Offer: &quot;+row.item(&quot;Description&quot;).ToString+vbNewLine+&quot;Link to website: &quot;+row.Item(&quot;Url&quot;).ToString+vbNewLine]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_1" />
+                                            </Sequence>
+                                          </If.Then>
+                                        </If>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEachRow.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ForEachRow>
+                                <p1:WordInsertDataTable Bookmark="{x:Null}" OccurrenceIndex="{x:Null}" Text="{x:Null}" DataTable="[dtMonths]" DisplayName="Insert DataTable in Document" sap:VirtualizedContainerService.HintSize="585.6,191.2" sap2010:WorkflowViewState.IdRef="WordInsertDataTable_2" InsertRelativeTo="Document" Position="End" />
+                                <p1:WordExportToPdf DisplayName="Save Document as PDF" FilePath="Data\Safari_Report.pdf" sap:VirtualizedContainerService.HintSize="585.6,111.2" sap2010:WorkflowViewState.IdRef="WordExportToPdf_2" />
+                              </Sequence>
+                            </ActivityAction>
+                          </p1:WordApplicationScope.Body>
+                        </p1:WordApplicationScope>
+                      </Sequence>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">350,234.4</av:Point>
+                              <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Email" sap:VirtualizedContainerService.HintSize="375.2,520.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="Please write your email below." Title="Your Email">
+                              <ui:InputDialog.Result>
+                                <OutArgument x:TypeArguments="x:String">[YourEmail]</OutArgument>
+                              </ui:InputDialog.Result>
+                            </ui:InputDialog>
+                            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Dear Esteemed customer, we hope this email finds you in good spirit.&quot;+vbnewline+vbNewLine+&quot;We are writing to share with you information about your planned safari to Tanzania. Attached below is a document with recommended safari companies, their pricing, and their offers. We have also included details of what to expect in each month to assist your travel decisions.&quot;+vbNewLine+vbNewLine+&quot;It is our hope that you will find this insightful. Feel free to contact us for any enquiries.&quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="Your Safari to Tanzania" To="[YourEmail]">
+                              <ui:SendOutlookMail.Files>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                  <InArgument x:TypeArguments="x:String">C:\Users\inova\OneDrive\Desktop\Innocent Novart_RPA Final\Data\Safari_Report.pdf</InArgument>
+                                </scg:List>
+                              </ui:SendOutlookMail.Files>
+                            </ui:SendOutlookMail>
+                          </Sequence>
+                        </FlowStep>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+  </Flowchart>
+</Activity>
